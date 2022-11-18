@@ -19,6 +19,12 @@ export default function Match({ teams, handleTeams, index }) {
     handleTeams(clasif, index);
   }, [clasif]);
 
+  useEffect(() => {
+    if(teams[0] === undefined && teams[0] === undefined){
+        setClasif([])
+    }
+  }, [teams])
+
   return (
     <div className="d-flex flex-column gap-2 align-items-center">
       <button
