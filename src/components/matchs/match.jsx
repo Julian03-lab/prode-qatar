@@ -20,8 +20,8 @@ export default function Match({ teams, handleTeams, index }) {
   }, [clasif]);
 
   useEffect(() => {
-    if(teams[0] === undefined && teams[0] === undefined){
-        setClasif([])
+    if (!teams.includes(clasif[0])) {
+       setClasif([]) 
     }
   }, [teams])
 
