@@ -1,0 +1,11 @@
+.teams{
+    font-size: 0.9rem;
+    font-weight: 600;
+    font-family: 'Sono', sans-serif;
+}
+
+@media all and (min-width: 768px ) and (max-width:1023px){
+    .teams{
+        font-size: 0.9rem;
+    }
+}

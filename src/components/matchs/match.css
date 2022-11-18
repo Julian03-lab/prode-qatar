@@ -1,0 +1,26 @@
+.team-button {
+  font-weight: 500;
+  font-size: 0.9rem;
+  font-family: "Sono", sans-serif;
+  min-height: 32px;
+  width: 50%;
+}
+
+
+@media all and (min-width: 768px) and (max-width: 1023px) {
+  .team-button {
+    font-weight: 500;
+    font-size: 1.2rem;
+    min-height: 35px;
+    width: 75%;
+  }
+}
+
+@media all and (min-width: 1024px ){
+    .team-button {
+        font-size: 1.2rem;
+        min-height: 35px;
+        width: 85%;
+      }
+}
+

@@ -1,7 +1,12 @@
 import React, { useEffect, useState } from "react";
+import "./groups.css";
 
 export function Team({ name, addTeam }) {
-  return <div onClick={addTeam}>{name}</div>;
+  return (
+    <div className="teams text-light" onClick={addTeam}>
+      {name}
+    </div>
+  );
 }
 
 export default function Groups({ group, sumbitData, index }) {
@@ -19,9 +24,9 @@ export default function Groups({ group, sumbitData, index }) {
   const selectColor = (team) =>
     clasif.includes(team)
       ? clasif.indexOf(team) === 0
-        ? "green"
-        : "blue"
-      : "#ccc";
+        ? "#00A23B"
+        : "#177C00"
+      : "#212529";
 
   useEffect(() => {
     sumbitData(clasif, index);
@@ -29,8 +34,8 @@ export default function Groups({ group, sumbitData, index }) {
 
   return (
     <div className="table-responsive col-6 col-md-3">
-      <table className="table table-hover text-center">
-        <thead className="table-light">
+      <table className="table table-hover text-center table-borderless">
+        <thead className="table-danger">
           <tr>
             <th scope="col">Group {group.letter}</th>
           </tr>
