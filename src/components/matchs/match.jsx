@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./match.css";
 
-export default function Match({ teams, handleTeams, index }) {
+export default function Match({ teams, handleTeams, index, phaseID }) {
   const [clasif, setClasif] = useState([]);
 
   const holdClick = (e) => {
@@ -13,7 +13,9 @@ export default function Match({ teams, handleTeams, index }) {
     }
   };
 
-  const selectColor = (team) => (clasif.includes(team) ? "#00A23B" : "#212529");
+  const selectColor = (team) => {
+    return clasif.includes(team) ? "#00A23B" : "#212529";
+  };
 
   useEffect(() => {
     handleTeams(clasif, index);
@@ -21,12 +23,12 @@ export default function Match({ teams, handleTeams, index }) {
 
   useEffect(() => {
     if (!teams.includes(clasif[0])) {
-       setClasif([]) 
+      setClasif([]);
     }
-  }, [teams])
+  }, [teams]);
 
   return (
-    <div className="d-flex flex-column gap-2 align-items-center">
+    <div className="d-flex flex-row flex-md-column gap-2 align-items-center">
       <button
         className="team-button btn btn-secondary btn-sm"
         onClick={holdClick}

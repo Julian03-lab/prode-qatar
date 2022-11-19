@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Match from "../matchs/match";
-import "./playoffs.css"
+import "./playoffs.css";
 const A = 0;
 const B = 1;
 const C = 2;
@@ -13,9 +13,11 @@ const FIRST = 0;
 const SECOND = 1;
 
 export const Round16 = ({ teams, getQuarters }) => {
-    const [round16, setRound16] = useState([]);
-    const [quarter, setQuarter] = useState([[],[],[],[],[],[],[],[]])
-    
+  const phaseID = 1;
+
+  const [round16, setRound16] = useState([]);
+  const [quarter, setQuarter] = useState([[], [], [], [], [], [], [], []]);
+
   const matches = [
     [teams[A][FIRST], teams[B][SECOND]],
     [teams[C][FIRST], teams[D][SECOND]],
@@ -32,28 +34,27 @@ export const Round16 = ({ teams, getQuarters }) => {
   }, [teams]);
 
   useEffect(() => {
-    getQuarters(quarter)
-  }, [quarter])
-  
+    getQuarters(quarter);
+  }, [quarter]);
 
   function handleTeams(clasif, index) {
     const newTeams = quarter.map((t, i) => {
-        if (i === index) {
-          return (t = clasif);
-        } else {
-          return t;
-        }
-      });
-  
-    setQuarter(newTeams)
+      if (i === index) {
+        return (t = clasif);
+      } else {
+        return t;
+      }
+    });
+
+    setQuarter(newTeams);
   }
 
   return (
-    <div className="col-12 col-md-6 col-lg-4 col-xl-3">
-      <h1 className="p-2 p-md-3 playoffs-title">ROUND OF 16</h1>
+    <div className="col-12 col-md-6 col-lg-4 col-xl-3 py-2">
+      <h1 className="p-md-3 playoffs-title">ROUND OF 16</h1>
       <div className="d-flex flex-column gap-3 gap-md-4">
         {round16.map((teams, i) => (
-          <Match teams={teams} key={i} handleTeams={handleTeams} index={i}/>
+          <Match teams={teams} key={i} handleTeams={handleTeams} index={i} phaseID={phaseID}/>
         ))}
       </div>
     </div>
