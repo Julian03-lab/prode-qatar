@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Groups from "../group/groups";
+import Champ from "../playoffs/Champ";
 import Final from "../playoffs/Finals";
 import Quarters from "../playoffs/Quarters";
 import { Round16 } from "../playoffs/Round16";
@@ -43,12 +44,13 @@ const Matches = ({ data }) => {
           />
         ))}
       </div>
-      <div className="container-fluid py-2 px-4">
+      <div className="container-fluid pt-2 pb-4">
         <div className="row align-items-center justify-content-center text-center">
           <Round16 teams={playoffs} getQuarters={getQuarters} />
           <Quarters teams={quarter} getSemis={getSemis} />
           <Semis teams={semis} getFinal={getFinal} />
           <Final teams={final} getChamp={getChamp} />
+          <Champ champion={champ}/>
         </div>
       </div>
     </div>

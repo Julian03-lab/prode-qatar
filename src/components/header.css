@@ -1,0 +1,25 @@
+div {
+  font-family: "Sono", sans-serif;
+}
+
+.fifa {
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: #0B0014;
+}
+
+.qatar {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #d44d5c;
+}
+
+.personal {
+  color: #773344;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.personal a {
+  color: #773344;
+}

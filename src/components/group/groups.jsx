@@ -35,7 +35,7 @@ export default function Groups({ group, sumbitData, index }) {
   return (
     <div className="table-responsive col-6 col-md-3">
       <table className="table table-hover text-center table-borderless">
-        <thead className="table-danger">
+        <thead>
           <tr>
             <th scope="col">Group {group.letter}</th>
           </tr>

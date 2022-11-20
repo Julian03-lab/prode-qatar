@@ -1,11 +1,17 @@
-.teams{
-    font-size: 0.9rem;
-    font-weight: 600;
-    font-family: 'Sono', sans-serif;
+.teams {
+  font-size: 0.9rem;
+  font-weight: 600;
+  font-family: "Sono", sans-serif;
+  color: #F5E9E2;
 }
 
-@media all and (min-width: 768px ) and (max-width:1023px){
-    .teams{
-        font-size: 0.9rem;
-    }
+thead {
+  background-color: #773344;
+  color: #f5e9e2;
+}
+
+@media all and (min-width: 768px) and (max-width: 1023px) {
+  .teams {
+    font-size: 0.9rem;
+  }
 }

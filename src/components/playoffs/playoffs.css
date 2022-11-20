@@ -1,12 +1,20 @@
 .playoffs-title {
   margin: 0;
+  font-weight: 600;
+  font-size: 2.2rem;
+  font-family: "Sono", sans-serif;
+  color: #0B0014;
+}
+
+.playoffs-champion{
+  margin: 0;
   font-weight: 700;
   font-size: 2.2rem;
   font-family: "Sono", sans-serif;
 }
 
 @media all and (min-width: 768px ) and (max-width:1023px){
-    .playoffs-title {
-        font-size: 2.2rem;
+      .playoffs-champion{
+        font-size: 2.7rem;
       }
 }
