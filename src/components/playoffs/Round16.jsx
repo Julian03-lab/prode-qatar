@@ -13,8 +13,6 @@ const FIRST = 0;
 const SECOND = 1;
 
 export const Round16 = ({ teams, getQuarters }) => {
-  const phaseID = 1;
-
   const [round16, setRound16] = useState([]);
   const [quarter, setQuarter] = useState([[], [], [], [], [], [], [], []]);
 
@@ -54,7 +52,7 @@ export const Round16 = ({ teams, getQuarters }) => {
       <h1 className="p-md-3 playoffs-title">ROUND OF 16</h1>
       <div className="d-flex flex-column gap-3 gap-md-4">
         {round16.map((teams, i) => (
-          <Match teams={teams} key={i} handleTeams={handleTeams} index={i} phaseID={phaseID}/>
+          <Match teams={teams} key={i} handleTeams={handleTeams} index={i}/>
         ))}
       </div>
     </div>

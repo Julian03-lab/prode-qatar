@@ -3,9 +3,8 @@ import Match from "../matchs/match";
 import "./playoffs.css"
 
 function Quarters({ teams, getSemis }) {
-    const phaseID = 2
     const [quarter, setQuarter] = useState([]);
-    const [semis, setSemis] = useState([[],[],[],[]])
+    const [semis, setSemis] = useState([[], [], [], []])
 
      const matches = [
          [teams[0]?.[0], teams[1]?.[0]],
@@ -39,7 +38,7 @@ function Quarters({ teams, getSemis }) {
       <h1 className="p-2 p-md-3 playoffs-title">QUARTER-FINALS</h1>
        <div className="d-flex flex-column gap-3 gap-md-4">
         {quarter.map((teams, i) => (
-          <Match teams={teams} key={i} handleTeams={handleTeams} index={i} phaseID={phaseID}/>
+          <Match teams={teams} key={i} handleTeams={handleTeams} index={i}/>
         ))}
       </div>
     </div>

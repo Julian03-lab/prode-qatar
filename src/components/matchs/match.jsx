@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./match.css";
 
-export default function Match({ teams, handleTeams, index, phaseID }) {
+export default function Match({ teams, handleTeams, index }) {
   const [clasif, setClasif] = useState([]);
 
   const holdClick = (e) => {
